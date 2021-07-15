@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+.container {
+    display: flex;
+    width: 90vw;
+}
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+.panel1 {
+    background-image: url('../01/images/animal1.jpg');
+}
+.panel2 {
+    background-image: url('../01/images/animal2.jpg');
+}
+.panel3 {
+    background-image: url('../01/images/animal3.jpg');
+}
+.panel4 {
+    background-image: url('../01/images/animal4.jpg');
+}
+.panel5 {
+    background-image: url('../01/images/animal5.jpg');
+}
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    color: white;
+}
+.panel.active {
+    flex: 5;
+}
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s 0.4s ease-in;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100wv;
+    }
+    .panel:nth-last-of-type(4),
+    .panel:nth-last-of-type(5) {
+        display: none;
+    }
+}
